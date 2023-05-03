@@ -1,0 +1,4 @@
+<div class="list-container">
+  <app-list-item  *ngFor="let book of books; trackBy:trackByFn" [book]="book"></app-list-item>
+  <h3 *ngIf="!books?.length">No books were found.</h3>
+</div>

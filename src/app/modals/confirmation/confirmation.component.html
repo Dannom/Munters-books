@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <p>Are you sure you want to delete "{{ book.volumeInfo.title }}"?</p>
+</div>
+<div class="modal-footer">
+  <button
+  type="button"
+  class="btn btn-outline-dark"
+  (click)="activeModal.close('Close click')"
+>
+  No
+</button>
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="onDelete()"
+  >
+    Yes
+  </button>
+
+</div>

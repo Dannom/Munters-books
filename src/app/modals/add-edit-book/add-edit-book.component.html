@@ -1,0 +1,62 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    {{ book ? "Edit " + book.volumeInfo.title : "Add a new book" }}
+  </h4>
+</div>
+<div class="modal-body">
+  <form [formGroup]="bookForm" class="row g-3">
+    <div class="col-12">
+      <label for="title" class="form-label">Title</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        id="title"
+      />
+    </div>
+    <div class="col-12">
+      <label for="authors" class="form-label">Authors (seperated by commas)</label>
+      <input
+        formControlName="authors"
+        type="text"
+        class="form-control"
+        id="authors"
+      />
+    </div>
+    <div class="col-12">
+      <label for="publisher" class="form-label">publisher</label>
+      <input
+        formControlName="publisher"
+        type="text"
+        class="form-control"
+        id="publisher"
+      />
+    </div>
+    <div class="col-12">
+      <label for="publishedDate" class="form-label">Published Year</label>
+      <input
+        formControlName="publishedDate"
+        type="text"
+        class="form-control"
+        id="publishedDate"
+      />
+    </div>
+    <div class="col-12">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        formControlName="description"
+        class="form-control"
+        id="description"
+      ></textarea>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click');">
+    Close
+  </button>
+  <button type="button" class="btn btn-outline-success" (click)="onSave()">
+    Save
+  </button>
+
+</div>

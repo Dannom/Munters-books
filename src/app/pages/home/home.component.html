@@ -1,0 +1,9 @@
+<div class="headline">
+  <h2>List of books</h2>
+  <button type="button" class="btn btn-outline-success" (click)="onAdd()">
+    Add a Book
+  </button>
+</div>
+
+<app-search></app-search>
+<app-list [books]="books$ | async"></app-list>

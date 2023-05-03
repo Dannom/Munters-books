@@ -1,0 +1,24 @@
+<div class="card" *ngIf="book.volumeInfo as info" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="info.imageLinks?.thumbnail" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{info.title}}</h5>
+        <p>Authors:</p>
+        <p class="card-text">{{info.authors}}</p>
+        <p>Description:</p>
+        <p class="card-text"><small class="text-body-secondary">{{info.description}}</small></p>
+        <p>Publisher:</p>
+        <p class="card-text">{{info.publisher}}</p>
+        <p>Published Date:</p>
+        <p class="card-text">{{info.publishedDate}}</p>
+        <p>Ratings Count:</p>
+        <p class="card-text">{{info.ratingsCount}}</p>
+        <p>Average rating:</p>
+        <p class="card-text">{{info.averageRating}}</p>
+      </div>
+    </div>
+  </div>
+</div>
