@@ -15,7 +15,9 @@
       />
     </div>
     <div class="col-12">
-      <label for="authors" class="form-label">Authors (seperated by commas)</label>
+      <label for="authors" class="form-label"
+        >Authors (seperated by commas)</label
+      >
       <input
         formControlName="authors"
         type="text"
@@ -52,11 +54,15 @@
   </form>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click');">
+  <!-- i would add better keyboard accessibility -->
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
     Close
   </button>
   <button type="button" class="btn btn-outline-success" (click)="onSave()">
     Save
   </button>
-
 </div>

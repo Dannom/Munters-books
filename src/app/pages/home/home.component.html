@@ -5,5 +5,7 @@
   </button>
 </div>
 
-<app-search></app-search>
-<app-list [books]="books$ | async"></app-list>
+<div *ngIf="(books$ | async) as books">
+  <app-search></app-search>
+  <app-list [books]="books"></app-list>
+</div>

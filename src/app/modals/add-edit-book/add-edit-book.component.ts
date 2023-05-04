@@ -28,6 +28,7 @@ export class AddEditBookComponent implements OnInit {
   }
 
   buildForm(): void {
+    // for prod puropses i would add validatios message and not only red border
     this.bookForm = new FormGroup({
       title: new FormControl('', [Validators.required]),
       authors: new FormControl('', [Validators.required]),

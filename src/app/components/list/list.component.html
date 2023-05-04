@@ -1,4 +1,17 @@
+<ngb-pagination
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="books.length"
+>
+</ngb-pagination>
+
 <div class="list-container">
-  <app-list-item  *ngFor="let book of books; trackBy:trackByFn" [book]="book"></app-list-item>
+  <app-list-item
+    *ngFor="
+      let book of books | slice : (page - 1) * pageSize : page * pageSize;
+      trackBy: trackByFn
+    "
+    [book]="book"
+  ></app-list-item>
   <h3 *ngIf="!books?.length">No books were found.</h3>
 </div>

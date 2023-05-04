@@ -7,7 +7,9 @@ import { Book } from 'src/app/interfaces/book.interface';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input() books: Book[] | null = [];
+  @Input() books: Book[] = [];
+  page: number = 1;
+  pageSize: number= 10;
 
   trackByFn(index: number, item: Book) {
     if(!item) return null;
